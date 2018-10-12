@@ -510,13 +510,16 @@ public class VentanaAhorcado extends javax.swing.JFrame {
         dibujaImagen (numeroFallos);
     }
         
-        if (pantalla.getText().contains("_")){
-            
-        }
-        else {
+        if (!pantalla.getText().contains("_")){
             dibujaImagen (-1);
             
         }
+        if (numeroFallos == 6){
+            pantalla.setText("GAME OVER");
+        }
+           
+            
+        
     }
     private void chequeaBoton ( JButton miBoton){
         miBoton.setEnabled((false));
